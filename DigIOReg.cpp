@@ -1,28 +1,28 @@
-#define GPIO_ENABLE_REG reinterpret_cast<volatile uint32_t*>(0x60004020) // Master Direction Reg
+#define GPIO_ENABLE_REG reinterpret_cast<volatile uint32_t*>(0x60004020) //global direction reg
 
 
-#define GPIO0_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009004) // Individual Config Reg
-#define GPIO1_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009008) // Individual Config Reg
-#define GPIO2_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x6000900C) // Individual Config Reg
-#define GPIO3_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009010) // Individual Config Reg
-#define GPIO4_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009014) // Individual Config Reg
-#define GPIO5_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009018) // Individual Config Reg
-#define GPIO6_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x6000901C) // Individual Config Reg
-#define GPIO7_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009020) // Individual Config Reg
-#define GPIO8_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009024) // Individual Config Reg
-#define GPIO9_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009028) // Individual Config Reg
-#define GPIO10_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x6000902C) // Individual Config Reg
-#define GPIO11_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009030) // Individual Config Reg
-#define GPIO12_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009034) // Individual Config Reg
-#define GPIO13_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009038) // Individual Config Reg
-#define GPIO14_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x6000903C) // Individual Config Reg
-#define GPIO15_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009040) // Individual Config Reg
-#define GPIO16_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009044) // Individual Config Reg
-#define GPIO17_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009048) // Individual Config Reg
-#define GPIO18_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x6000904C) // Individual Config Reg
-#define GPIO19_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009050) // Individual Config Reg
-#define GPIO20_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009054) // Individual Config Reg
-#define GPIO21_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009058) // Individual Config Reg
+#define GPIO0_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009004) 
+#define GPIO1_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009008)
+#define GPIO2_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x6000900C) 
+#define GPIO3_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009010) 
+#define GPIO4_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009014) 
+#define GPIO5_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009018) 
+#define GPIO6_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x6000901C) 
+#define GPIO7_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009020) 
+#define GPIO8_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009024) 
+#define GPIO9_MODE_REG        reinterpret_cast<volatile uint32_t*>(0x60009028) 
+#define GPIO10_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x6000902C) 
+#define GPIO11_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009030) 
+#define GPIO12_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009034) 
+#define GPIO13_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009038) 
+#define GPIO14_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x6000903C) 
+#define GPIO15_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009040) 
+#define GPIO16_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009044) 
+#define GPIO17_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009048)
+#define GPIO18_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x6000904C) 
+#define GPIO19_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009050) 
+#define GPIO20_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009054) 
+#define GPIO21_MODE_REG       reinterpret_cast<volatile uint32_t*>(0x60009058) 
 
 
 
