@@ -46,7 +46,7 @@ public:
 
     const Mode ioregmod; // 1 -> input, 0 -> output
     
-    volatile uint32_t* const pinconf; //mode register address
+    volatile uint32_t* const pinconf; //gpio mode address
     
     volatile uint32_t* const dataregadd; //data register address
     
