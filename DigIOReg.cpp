@@ -46,17 +46,19 @@ public:
 
     const Mode ioregmod; // 1 -> input, 0 -> output
     
-    volatile uint32_t* const pinconf; //gpio mode address
+    volatile uint32_t* const regconf; //register config
+    
+    volatile uint32_t* const gpiomode; //gpio mode address
     
     volatile uint32_t* const dataregadd; //data register address
     
     const uint32_t pinmask;
 
     
-    static DigIOReg* digioreg(Mode ioregmod, volatile uint32_t* pinconf, volatile uint32_t* dataregadd, uint32_t pinmask, void* buffer) {
+    static DigIOReg* digioreg(volatile uint32_t* regconf, Mode ioregmod, volatile uint32_t* gpiomode, volatile uint32_t* dataregadd, uint32_t pinmask, void* buffer) {
         
         
-        return ::new (buffer) DigIOReg(ioregmod, pinconf, dataregadd, pinmask);
+        return ::new (buffer) DigIOReg(regconf, ioregmod, gpiomode, dataregadd, pinmask);
         
     }
     
@@ -87,16 +89,18 @@ public:
     
 private:
 
-    DigIOReg(Mode m, volatile uint32_t* ra, volatile uint32_t* da, uint32_t p) : ioregmod(m), pinconf(ra), dataregadd(da), pinmask(p) {
+    DigIOReg(volatile uint32_t* rcf, Mode m, volatile uint32_t* ra, volatile uint32_t* da, uint32_t p) : regconf(rcf), ioregmod(m), gpiomode(ra), dataregadd(da), pinmask(p) {
         
-        *pinconf = (1 << 12);
+        
+        
+        *gpiomode |= (1 << 12);
         
         if (ioregmod == Mode::output) {
-            *GPIO_ENABLE_REG |= pinmask;  // Turn ON our pin's bit (Output)
+            *regconf |= pinmask;  // Turn ON our pin's bit (Output)
         } 
         
         else {
-            *GPIO_ENABLE_REG &= ~pinmask; // Turn OFF our pin's bit (Input)
+            *regconf &= ~pinmask; // Turn OFF our pin's bit (Input)
         }
     
  
@@ -113,6 +117,7 @@ int main() {
     
     // 1. Create the Pin 8 Output instance
     DigIOReg* led = DigIOReg::digioreg(
+        GPIO_ENABLE_REG,
         DigIOReg::Mode::output,  
         GPIO8_MODE_REG,          
         GPIO_DATA_REG,           
@@ -132,7 +137,6 @@ int main() {
   
     
 }
-
 
 
 
