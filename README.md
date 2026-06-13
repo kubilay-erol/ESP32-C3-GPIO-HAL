@@ -1,7 +1,3 @@
-Here is a clean, professional, and punchy `README.md` for your GitHub repository. It clearly explains the object-oriented architecture and bare-metal register mapping you used to master the ESP32-C3 hardware.
-
----
-
 # ESP32-C3 Bare-Metal Register DigIOReg Driver
 
 A lightweight, zero-dependency, object-oriented C++ driver written from scratch to control the General Purpose Input/Output (GPIO) pins on the **Espressif ESP32-C3** (specifically tested on the SuperMini form factor) via direct register manipulation.
